@@ -1,0 +1,22 @@
+<form [formGroup]="searchForm" (ngSubmit)="searchPokemon()" class="m-3">
+  <div class="d-flex col-8">
+    <input formControlName="pokemonName" placeholder="Ingresa el nombre del pokemon" class="form-control mr-3">
+    <button type="submit" class="btn btn-primary ">Buscar</button>
+  </div>
+</form>
+
+<div *ngIf="pokemonData" class="card m-3">
+  <div class="card-body">
+    <h2 class="card-title">{{ pokemonData.name }}</h2>
+    <img [src]="pokemonData.sprites.front_default" alt="{{ pokemonData.name }}" class="img-fluid">
+    <p>Experiencia: {{ pokemonData.base_experience }}</p>
+    <div>
+      <h3>Habilidades:</h3>
+      <ul>
+        <li *ngFor="let ability of pokemonData.abilities" class="list-group-item">
+          {{ ability.ability.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

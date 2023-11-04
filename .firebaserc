@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-auth-c82a7": {
+      "hosting": {
+        "prueba": [
+          "angular-auth-c82a7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-auth-c82a7"
+  }
+}
